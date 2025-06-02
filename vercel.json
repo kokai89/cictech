@@ -13,13 +13,20 @@
     {
       "src": "/static/(.*)",
       "headers": {
+        "Content-Type": "text/javascript",
         "cache-control": "public, max-age=31536000, immutable"
-      },
-      "continue": true
+      }
+    },
+    {
+      "src": "/static/css/(.*)",
+      "headers": {
+        "Content-Type": "text/css",
+        "cache-control": "public, max-age=31536000, immutable"
+      }
     },
     {
       "src": "/(.*)",
-      "dest": "/",
+      "dest": "/index.html",
       "headers": {
         "cache-control": "no-cache"
       }
